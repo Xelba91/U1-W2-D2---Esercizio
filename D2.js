@@ -6,9 +6,9 @@
 let num1 = 4;
 let num2 = 7;
 if (num1 > num2) {
-  console.log(`Esercizio 1 : ${num1} è maggiore di ${num2}`);
+  console.log(`Esercizio 1: ${num1} è maggiore di ${num2}`);
 } else {
-  console.log(`Esercizio 1 : ${num2} è maggiore di ${num1}`);
+  console.log(`Esercizio 1: ${num2} è maggiore di ${num1}`);
 }
 
 /* ESERCIZIO 2
@@ -28,7 +28,7 @@ if (num1 !== 5) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 let num3 = 10;
 if (num3 % 5 === 0) {
-  console.log("Esercizio 3 :", num3, " è divisibile per 5");
+  console.log("Esercizio 3:", num3, " è divisibile per 5");
 }
 
 /* ESERCIZIO 4
@@ -54,17 +54,17 @@ if (num1 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let prodotto = 10;
+let prodotto = 22;
 let prodotto2 = 25;
 let spedizione = 10;
 let totale = prodotto + prodotto2;
+let risposta = `Esercizio 5: Hai speso ${totale}€,`;
 if (totale > 50) {
-  console.log(`Esercizio 5: Hai speso ${totale}€, hai diritto alla spedizione gratuita`);
+  risposta += `hai diritto alla spedizione gratuita`;
+  console.log(risposta);
 } else if (totale < 50) {
-  console.log(`Esercizio 5:
-  Hai speso ${totale}€ non hai diritto alla spedizione gratuita, costo totale`,
-    totale + spedizione
-  );
+  risposta += ` non hai diritto alla spedizione gratuita, costo totale`;
+  console.log(risposta, totale + spedizione, "€");
 }
 
 /* ESERCIZIO 6
@@ -74,8 +74,21 @@ if (totale > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-// let scontoBlack = 20;
-// let scontoTot = (scontoBlack / 100) * prodotto;
+let scontoBlack = 20;
+let scontoTot = (scontoBlack / 100) * totale;
+risposta = `Esercizio 6: Oggi promozione BlackFriday, hai uno sconto del ${scontoBlack}%\nHai speso ${totale}€ - ${scontoBlack}%,`;
+totale -= scontoTot;
+
+risposta += `totale ${totale}€ hai risparmiato ${scontoTot}€`;
+
+if (totale > 50) {
+  risposta += ` e hai diritto alla spedizione gratuita`;
+  console.log(risposta);
+} else if (totale < 50) {
+  totale += spedizione;
+  risposta += `,non hai diritto alla spedizione gratuita, costo totale:` + totale + "€";
+  console.log(risposta);
+}
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -84,22 +97,38 @@ if (totale > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let num4 = 2;
-let num5 = 5;
-let num6 = 9;
+let num4 = 11;
+let num5 = 12;
+let num6 = 10;
 
-if ((num4 > num5) && (num4 > num6) && (num5 > num6)) {
-  console.log("Esercizio 7:",num4,num5,num6)
-}else if((num4 > num5) && (num4 > num6) && (num6 > num5)){ 
-  console.log("Esercizio 7:",num4,num6,num5)
-}else if ((num5 > num4) && (num5 > num6) && (num4 > num6)){
-  console.log("Esercizio 7:",num5,num4,num6)  
-}else if ((num5 > num4) && (num5 > num6) && (num6 > num4)) {
-  console.log("Esercizio 7:",num5,num6,num4) 
-}else if ((num6 > num4) && (num6 > num5) && (num5 > num4)) {
-console.log("Esercizio 7:",num6,num5,num4)
-}else if ((num6 > num4) && (num6 > num5) && (num4 > num5)) {
-  console.log("Esercizio 7:",num6,num4,num5)
+if (num4 > num5 && num4 > num6 && num5 > num6) {
+  console.log("Esercizio 7:", num4, num5, num6);
+} else if (num4 > num5 && num4 > num6 && num6 > num5) {
+  console.log("Esercizio 7:", num4, num6, num5);
+} else if (num5 > num4 && num5 > num6 && num4 > num6) {
+  console.log("Esercizio 7:", num5, num4, num6);
+} else if (num5 > num4 && num5 > num6 && num6 > num4) {
+  console.log("Esercizio 7:", num5, num6, num4);
+} else if (num6 > num4 && num6 > num5 && num5 > num4) {
+  console.log("Esercizio 7:", num6, num5, num4);
+} else if (num6 > num4 && num6 > num5 && num4 > num5) {
+  console.log("Esercizio 7:", num6, num4, num5);
+
+  //Per numeri uguali
+} else if (num4 === num6 && num4 === num5) {
+  console.log("Esercizio 7:sono tutti uguali!", num4, num5, num6);
+} else if (num4 === num6 && num4 < num5) {
+  console.log("Esercizio 7:", num5, num4, num6);
+} else if (num4 === num6 && num4 > num5) {
+  console.log("Esercizio 7:", num4, num6, num5);
+} else if (num4 === num5 && num4 < num6) {
+  console.log("Esercizio 7:", num6, num4, num5);
+} else if (num4 === num5 && num4 > num6) {
+  console.log("Esercizio 7:", num4, num5, num6);
+} else if (num5 === num6 && num4 > num5) {
+  console.log("Esercizio 7:", num4, num5, num6);
+} else if (num5 === num6 && num4 < num5) {
+  console.log("Esercizio 7:", num5, num6, num4);
 }
 
 /* ESERCIZIO 8
@@ -117,23 +146,23 @@ console.log(`Esercizio 8: ${num7} è di tipo:`, message);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let num8 = 15;
-let message2 =`Esercizio 9: `;
+let message2 = `Esercizio 9: `;
 if (num8 % 2 === 0) {
-   message2 += `${num8} è pari!`
-} else{
-  message2 += `${num8} è dispari!`
+  message2 += `${num8} è pari!`;
+} else {
+  message2 += `${num8} è dispari!`;
 }
-console.log(message2)
+console.log(message2);
 
 // ESERCIZIO 10
 //Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
 let val = 7;
 if (val < 5) {
-  console.log("ESERCIZIO 10 - Meno di 5");
+  console.log(`Esercizio 10: ${val} è Minore di 5`);
 } else if (val < 10) {
-  console.log("ESERCIZIO 10 - Meno di 10");
+  console.log(`Esercizio 10: ${val} è Minore di 10`);
 } else {
-  console.log("ESERCIZIO 10 - Uguale a 10 o maggiore");
+  console.log(`Esercizio 10: ${val} è Uguale a 10 o maggiore`);
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -150,9 +179,8 @@ const me = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-
 me.city = "Toronto";
-console.log(`Esercizio 11: aggiunta proprieta city: Toronto`,me);
+console.log(`Esercizio 11: aggiunta proprieta city: Toronto`, me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -160,7 +188,7 @@ console.log(`Esercizio 11: aggiunta proprieta city: Toronto`,me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 delete me.lastName;
-console.log(`Esercizio 12: rimossa proprietà lastName`,me);
+console.log(`Esercizio 12: rimossa proprietà lastName`, me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
@@ -168,9 +196,9 @@ console.log(`Esercizio 12: rimossa proprietà lastName`,me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-me.skills.splice(2,1)
- 
-console.log(`Esercizio 13: rimosso ultimo elemento della proprietà skills`,me);
+me.skills.splice(2, 1);
+
+console.log(`Esercizio 13: rimosso ultimo elemento della proprietà skills`, me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -178,14 +206,13 @@ console.log(`Esercizio 13: rimosso ultimo elemento della proprietà skills`,me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const arrayNumbers = [];
-arrayNumbers.push(1,2,3,4,5,6,7,8,9,10)
-console.log(`Esercizio 14:`, arrayNumbers)
-
+arrayNumbers.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(`Esercizio 14:`, arrayNumbers);
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-arrayNumbers.splice(9, 1, 100); 
-console.log(`Esercizio 15:`,arrayNumbers)
+arrayNumbers.splice(9, 1, 100);
+console.log(`Esercizio 15:`, arrayNumbers);
