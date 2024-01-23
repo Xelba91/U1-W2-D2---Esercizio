@@ -123,7 +123,7 @@ const me = {
 
 
 me.city = "Toronto";
-console.log(`Esercizio 11:`,me);
+console.log(`Esercizio 11: aggiunta proprieta city: Toronto`,me);
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -131,7 +131,7 @@ console.log(`Esercizio 11:`,me);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 delete me.lastName;
-console.log(`Esercizio 12:`,me);
+console.log(`Esercizio 12: rimossa proprietà lastName`,me);
 
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
@@ -148,9 +148,15 @@ console.log(`Esercizio 13: rimosso ultimo elemento della proprietà skills`,me);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const arrayNumbers = [];
+arrayNumbers.push(1,2,3,4,5,6,7,8,9,10)
+console.log(`Esercizio 14:`, arrayNumbers)
+
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+arrayNumbers.splice(9, 1, 100); 
+console.log(`Esercizio 15:`,arrayNumbers)
