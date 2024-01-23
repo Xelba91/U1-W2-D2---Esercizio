@@ -54,6 +54,18 @@ if (num1 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let prodotto = 10;
+let prodotto2 = 25;
+let spedizione = 10;
+let totale = prodotto + prodotto2;
+if (totale > 50) {
+  console.log(`Esercizio 5: Hai speso ${totale}€, hai diritto alla spedizione gratuita`);
+} else if (totale < 50) {
+  console.log(`Esercizio 5:
+  Hai speso ${totale}€ non hai diritto alla spedizione gratuita, costo totale`,
+    totale + spedizione
+  );
+}
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -72,6 +84,7 @@ if (num1 === 8) {
 let num4 = 2;
 let num5 = 5;
 let num6 = 9;
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
@@ -99,12 +112,12 @@ console.log(message2)
 // ESERCIZIO 10
 //Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
 let val = 7;
-if (val < 10) {
-  console.log("Meno di 10");
-} else if (val < 5) {
-  console.log("Meno di 5");
+if (val < 5) {
+  console.log("ESERCIZIO 10 - Meno di 5");
+} else if (val < 10) {
+  console.log("ESERCIZIO 10 - Meno di 10");
 } else {
-  console.log("Uguale a 10 o maggiore");
+  console.log("ESERCIZIO 10 - Uguale a 10 o maggiore");
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
