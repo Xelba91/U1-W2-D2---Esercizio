@@ -74,8 +74,8 @@ if (totale > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let scontoBlack = 20;
-let scontoTot = (scontoBlack / 100) * prodotto;
+// let scontoBlack = 20;
+// let scontoTot = (scontoBlack / 100) * prodotto;
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -89,18 +89,18 @@ let num5 = 5;
 let num6 = 9;
 
 if ((num4 > num5) && (num4 > num6) && (num5 > num6)) {
-  console.log(num4,num5,num6)
+  console.log("Esercizio 7:",num4,num5,num6)
 }else if((num4 > num5) && (num4 > num6) && (num6 > num5)){ 
-  console.log(num4,num6,num5)
+  console.log("Esercizio 7:",num4,num6,num5)
 }else if ((num5 > num4) && (num5 > num6) && (num4 > num6)){
-  console.log(num5,num4,num6)  
+  console.log("Esercizio 7:",num5,num4,num6)  
 }else if ((num5 > num4) && (num5 > num6) && (num6 > num4)) {
-  console.log(num5,num6,num4) 
+  console.log("Esercizio 7:",num5,num6,num4) 
 }else if ((num6 > num4) && (num6 > num5) && (num5 > num4)) {
-console.log(num6,num5,num4)
+console.log("Esercizio 7:",num6,num5,num4)
 }else if ((num6 > num4) && (num6 > num5) && (num4 > num5)) {
-  console.log(num6,num4,num5)
-
+  console.log("Esercizio 7:",num6,num4,num5)
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
